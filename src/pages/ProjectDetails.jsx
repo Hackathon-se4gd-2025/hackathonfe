@@ -37,7 +37,9 @@ const ProjectDetails = () => {
             <h4>Sprints</h4>
             <ul className="list-group">
                 {sprints.map((sprint) => (
-                    <li key={sprint._id} className="list-group-item">{sprint.name}</li>
+                    <li key={sprint._id} className="list-group-item">
+                        <Link to={`/sprints/${sprint._id}`}>{sprint.name}</Link>
+                    </li>
                 ))}
             </ul>
 
@@ -61,16 +63,15 @@ const ProjectDetails = () => {
                             <td>{item.sustainability ? "Yes" : "No"}</td>
                             <td>{item.priority}</td>
                             <td>
-                            <Link to={`/items/${item._id}/edit`} className="btn btn-warning btn-sm">Edit</Link>
-</td>
-
+                                <Link to={`/items/${item._id}/edit`} className="btn btn-warning btn-sm">Edit</Link>
+                            </td>
                         </tr>
                     ))}
                 </tbody>
             </table>
             <Link to={`/projects/${project?._id}/items/create`} className="btn btn-success mb-3">
-    + Add New Item
-</Link>
+                + Add New Item
+            </Link>
         </div>
     );
 };
