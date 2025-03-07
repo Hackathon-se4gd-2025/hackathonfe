@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:3000/", // Replace with your actual API URL
+  baseURL: "https://backend-susaf-scrum-production.up.railway.app", // Replace with your actual API URL
   headers: {
     "Content-Type": "application/json",
   },
