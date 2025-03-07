@@ -9,8 +9,8 @@ const Layout = ({ children }) => {
                 <nav className="nav flex-column">
                     <Link to="/" className="nav-link text-light">🏠 Home</Link>
                     <Link to="/projects" className="nav-link text-light"> Projects</Link>
-                    <Link to="/reports" className="nav-link text-light"> Reports</Link>
-                    <Link to="/settings" className="nav-link text-light"> Learn Sustainability</Link>
+                    <Link to="/metrics" className="nav-link text-light"> Metrics</Link>
+                    <a href="https://zahramabrouk290.wixsite.com/susiteducation" className="nav-link text-light" target="_blank" rel="noopener noreferrer"> Learn Sustainability</a>
                 </nav>
             </div>
 
