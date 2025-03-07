@@ -10,17 +10,21 @@ const ProjectsPage = () => {
   }, []);
 
   return (
-    <div className="container mt-4">
-      <h2>Projects</h2>
-      <ul className="list-group">
-        {projects.map((project) => (
-          <li key={project._id} className="list-group-item d-flex justify-content-between">
-            {project.name}
-            <Link to={`/projects/${project._id}`} className="btn btn-primary btn-sm">View</Link>
-          </li>
-        ))}
+    <>
+      <h2>📂 Projects</h2>
+      <ul className="list-group mt-3">
+        {projects.length === 0 ? (
+          <p>No projects available.</p>
+        ) : (
+          projects.map((project) => (
+            <li key={project._id} className="list-group-item d-flex justify-content-between align-items-center">
+              {project.name}
+              <Link to={`/projects/${project._id}`} className="btn btn-primary btn-sm">View</Link>
+            </li>
+          ))
+        )}
       </ul>
-    </div>
+    </>
   );
 };
 
