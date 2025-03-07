@@ -60,7 +60,13 @@ const ProjectDetails = () => {
                                 <Link to={`/backlog/${item._id}`}>{item.title}</Link>
                             </td>
                             <td>{item.description}</td>
-                            <td>{item.sustainability ? "Yes" : "No"}</td>
+                            <td>
+                                {item.sustainability ? (
+                                    <span role="img" aria-label="green leaf">🍃</span>
+                                ) : (
+                                    <span role="img" aria-label="gray leaf">🍂</span>
+                                )}
+                            </td>
                             <td>{item.priority}</td>
                             <td>
                                 <Link to={`/items/${item._id}/edit`} className="btn btn-warning btn-sm">Edit</Link>
