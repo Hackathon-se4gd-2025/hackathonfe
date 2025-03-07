@@ -96,7 +96,11 @@ const SprintDetails = () => {
                                                                 <p className="mb-1">{item.description}</p>
                                                                 <p className="text-muted">
                                                                     Priority: {item.priority} | 
-                                                                    Sustainability: {item.sustainability ? "Yes" : "No"}
+                                                                    <span className="ms-2">
+                                                                        {item.sustainability ? 
+                                                                            <span title="Sustainable" style={{ color: "green" }}>🌿</span> : 
+                                                                            <span title="Not Sustainable" style={{ color: "gray" }}>❌</span>}
+                                                                    </span>
                                                                 </p>
                                                                 <Link to={`/items/${item._id}/edit`} className="btn btn-sm btn-warning">Edit</Link>
                                                             </div>
